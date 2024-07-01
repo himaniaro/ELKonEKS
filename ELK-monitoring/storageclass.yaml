@@ -1,0 +1,9 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: aws-ebs-csi-sc
+provisioner: ebs.csi.aws.com
+parameters:
+  type: gp2  # EBS volume type (gp2, io1, sc1, st1)
+  encrypted: "false"  # Whether the volume should be encrypted
+
